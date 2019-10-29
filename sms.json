@@ -1,1 +1,213 @@
 
+{
+  "id": "65eee049-77d4-40bb-b78d-f9e32d77e248",
+  "name": "Nexmo - SMS",
+  "description": null,
+  "auth": null,
+  "events": null,
+  "variables": [],
+  "order": [
+    "c46957e6-d23d-45e9-9faf-9ea591482072"
+  ],
+  "folders_order": [],
+  "protocolProfileBehavior": [],
+  "folders": [],
+  "requests": [
+    {
+      "id": "c46957e6-d23d-45e9-9faf-9ea591482072",
+      "name": "Send SMS",
+      "url": "https://rest.nexmo.com/sms/json",
+      "description": "",
+      "data": [
+        {
+          "key": "api_key",
+          "value": "{{api_key}}",
+          "description": "Your API key",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "api_secret",
+          "value": "{{api_secret}}",
+          "description": "Your API secret. Required unless sig is provided",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "to",
+          "value": "17755254112",
+          "description": "The number that the message should be sent to. Numbers are specified in E.164 format.",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "from",
+          "value": "16672573537",
+          "description": "The name or number the message should be sent from. Alphanumeric senderID's are not supported in all countries, see Global Messaging for more details. If alphanumeric, spaces will be ignored. Numbers are specified in E.164 format.",
+          "type": "text",
+          "enabled": true
+        },
+        {
+          "key": "text",
+          "value": "Sending from my Postman collection.",
+          "description": "The body of the message being sent. If your message contains characters that can be encoded according to the GSM Standard and Extended tables then you can set the type to text. If your message contains characters outside this range, then you will need to set the type to unicode.",
+          "type": "text",
+          "enabled": true
+        }
+      ],
+      "dataOptions": null,
+      "dataMode": "urlencoded",
+      "headerData": [
+        {
+          "key": "Content-Type",
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": "",
+          "type": "text"
+        }
+      ],
+      "method": "POST",
+      "pathVariableData": [],
+      "queryParams": [
+        {
+          "key": "",
+          "value": "",
+          "description": "",
+          "enabled": true
+        }
+      ],
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "65eee049-77d4-40bb-b78d-f9e32d77e248",
+      "headers": "Content-Type: application/x-www-form-urlencoded\n",
+      "pathVariables": [],
+      "responses": [
+        {
+          "id": "fc4945a1-3c35-42dd-bf2c-faccc420d872",
+          "name": "Send SMS",
+          "status": null,
+          "mime": null,
+          "language": "json",
+          "text": "{\n    \"message-count\": \"1\",\n    \"messages\": [\n        {\n            \"to\": \"17755254112\",\n            \"message-id\": \"1300000079C3AD4D\",\n            \"status\": \"0\",\n            \"remaining-balance\": \"1.98760000\",\n            \"message-price\": \"0.00620000\",\n            \"network\": \"310004\"\n        }\n    ]\n}",
+          "responseCode": {
+            "code": 200,
+            "name": "OK"
+          },
+          "requestObject": {
+            "data": [
+              {
+                "key": "api_key",
+                "value": "17a23c96",
+                "description": "",
+                "type": "text",
+                "enabled": true
+              },
+              {
+                "key": "api_secret",
+                "value": "wmK0ymk7GQeSjJMC",
+                "description": "",
+                "type": "text",
+                "enabled": true
+              },
+              {
+                "key": "to",
+                "value": "17755254112",
+                "description": "",
+                "type": "text",
+                "enabled": true
+              },
+              {
+                "key": "from",
+                "value": "16672573537",
+                "description": "",
+                "type": "text",
+                "enabled": true
+              },
+              {
+                "key": "text",
+                "value": "Sending from my Postman collection.",
+                "description": "",
+                "type": "text",
+                "enabled": true
+              }
+            ],
+            "dataMode": "urlencoded",
+            "dataOptions": null,
+            "headerData": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": "",
+                "type": "text"
+              }
+            ],
+            "method": "POST",
+            "pathVariableData": [],
+            "queryParams": [
+              {
+                "key": "",
+                "value": "",
+                "description": "",
+                "enabled": true
+              }
+            ],
+            "url": "https://rest.nexmo.com/sms/json"
+          },
+          "headers": [
+            {
+              "key": "Server",
+              "value": "nginx"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 29 Oct 2019 18:34:56 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "max-age=1"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "deny"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block;"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubdomains"
+            },
+            {
+              "key": "Content-Disposition",
+              "value": "attachment; filename=\"api.txt\""
+            },
+            {
+              "key": "X-Nexmo-Trace-Id",
+              "value": "61a67cdee828d47539574f2315e645a4"
+            }
+          ],
+          "cookies": null,
+          "request": "c46957e6-d23d-45e9-9faf-9ea591482072",
+          "collection": "65eee049-77d4-40bb-b78d-f9e32d77e248"
+        }
+      ]
+    }
+  ]
+}
