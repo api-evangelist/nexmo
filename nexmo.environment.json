@@ -1,0 +1,19 @@
+{
+	"id": "c6d54742-a0f7-497e-8df0-63af89dc0f10",
+	"name": "Nexmo",
+	"values": [
+		{
+			"key": "api_key",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "api_secret",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-10-29T19:01:26.453Z",
+	"_postman_exported_using": "Postman/7.9.0"
+}
