@@ -1,0 +1,118 @@
+{
+    "id": "4f5e8446387c735c62fbf95816070c93",
+    "name": "Nexmo API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "c5094bb0aa45c0287f7e20f4a165c6df",
+            "name": "List Applications",
+            "url": "http:\/\/api.nexmo.com\/v2\/applications",
+            "description": "Get details of all apps associated with an account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "date_start",
+                    "description": "\nStart date range in ISO-8601 UTC format YYYY-MM-DDTHH:MM:SSZ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "count",
+                    "description": "\nOption to only return the record count. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to false.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_size",
+                    "description": "The number of records to limit the response to.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page_offset",
+                    "description": "Offset of the first record. ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date_end",
+                    "description": "End date range in ISO-8601 UTC format YYYY-MM-DDTHH:MM:SSZ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "4f5e8446387c735c62fbf95816070c93",
+            "rawModeData": ""
+        },
+        {
+            "id": "3fe4af814f5ea984c22166ccb5a68aa9",
+            "name": "",
+            "url": "http:\/\/api.nexmo.com\/v2\/applications",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "4f5e8446387c735c62fbf95816070c93",
+            "rawModeData": ""
+        },
+        {
+            "id": "ac1b111487254b00b9c885d711eac7ed",
+            "name": "Create Application",
+            "url": "http:\/\/api.nexmo.com\/v2\/applications",
+            "description": "Create a new application.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "4f5e8446387c735c62fbf95816070c93",
+            "rawModeData": ""
+        }
+    ]
+}
