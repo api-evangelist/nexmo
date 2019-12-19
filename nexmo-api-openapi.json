@@ -1,0 +1,591 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "2.0",
+        "title": "Nexmo API",
+        "description": "##OAI Specification of Nexmo's APIs.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.nexmo.com\/v2"
+    ],
+    "paths": {
+        "\/applications": {
+            "get": {
+                "summary": "List Applications",
+                "description": "Get details of all apps associated with an account.",
+                "operationId": "GETApplications",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "date_start",
+                        "in": "query",
+                        "description": "\nStart date range in ISO-8601 UTC format YYYY-MM-DDTHH:MM:SSZ"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "\nOption to only return the record count. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to false."
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "The number of records to limit the response to."
+                    },
+                    {
+                        "name": "page_offset",
+                        "in": "query",
+                        "description": "Offset of the first record. "
+                    },
+                    {
+                        "name": "date_end",
+                        "in": "query",
+                        "description": "End date range in ISO-8601 UTC format YYYY-MM-DDTHH:MM:SSZ"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create Application",
+                "description": "Create a new application.",
+                "operationId": "POSTApplications",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "applicationRequest": {
+                "type": "object",
+                "properties": {
+                    "answer_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "answer_url": {
+                        "description": "URL that gets called once a call is answered. The URL returns a NCCO.",
+                        "type": "string"
+                    },
+                    "application_type": {
+                        "description": "Type of application.",
+                        "type": "string"
+                    },
+                    "backup_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "backup_url": {
+                        "description": "Backup event URL in case primary is unavailable.",
+                        "type": "string"
+                    },
+                    "event_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "event_url": {
+                        "description": "Asynchronous webhook that receives event information of a call.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Friendly name of application.",
+                        "type": "string"
+                    },
+                    "numberpool_id": {
+                        "description": "ID of number pool connected to the application.",
+                        "type": "string"
+                    }
+                }
+            },
+            "applicationResponse": {
+                "type": "object"
+            },
+            "callBase": {
+                "type": "object",
+                "properties": {
+                    "from": {
+                        "description": "An e.164 formatted number or a SIP URI.",
+                        "type": "string"
+                    },
+                    "to": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "callRequest": {
+                "type": "object",
+                "properties": {
+                    " sip_username": {
+                        "description": "SIP username for authentication",
+                        "type": "string"
+                    },
+                    "answer_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "answer_url": {
+                        "description": "URL that gets called once a call is answered. The URL returns a NCCO.",
+                        "type": "string"
+                    },
+                    "backup_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "backup_url": {
+                        "description": "Backup event URL in case primary is unavailable.",
+                        "type": "string"
+                    },
+                    "dtmf_answer": {
+                        "description": "Digits that are sent as soon as the call is answered (pauses are created using \u2018p\u2019 = 500ms & \u2018*\u2019, \u2018#\u2019 are respected)",
+                        "type": "string"
+                    },
+                    "event_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "event_url": {
+                        "description": "Asynchronous webhook that receives event information of a call.",
+                        "type": "string"
+                    },
+                    "from": {
+                        "description": "An e.164 formatted number or a SIP URI.",
+                        "type": "string"
+                    },
+                    "length_timer": {
+                        "description": "Timer in seconds that starts after a call moves to the \u2018in_progress\u2019 state. Call is dropped when it reaches 0. 0>=length_timer\n",
+                        "type": "integer"
+                    },
+                    "machine_detection": {
+                        "description": "How to behave if an answering machine is encountered. Options are \u2018continue\u2019 or \u2018hangup\u2019. If continue, event_url is called with param MACHINE.  ",
+                        "type": "string"
+                    },
+                    "machine_timeout": {
+                        "description": "Machine detection analysis timeout in seconds. 2000>timeout<10000. Defaults to 5s",
+                        "type": "integer"
+                    },
+                    "ringing_timer": {
+                        "description": "Timer in seconds that starts after a call moves to the \u2018ringing\u2019 state. Call is dropped when it reaches 0. 0>=ringing_timer. Default is 60\n",
+                        "type": "integer"
+                    },
+                    "sip_headers": {
+                        "description": "Array of custom SIP headers to send in all SIP requests. Prefixed with \u2018NX-\u2019",
+                        "type": "array"
+                    },
+                    "sip_password": {
+                        "description": "SIP password for authentication",
+                        "type": "string"
+                    },
+                    "to": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "sip_headers": {
+                "type": "array"
+            },
+            "callResponse": {
+                "type": "object",
+                "properties": {
+                    "_links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "call_status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "call_uuid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "end_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "from": {
+                        "description": "An e.164 formatted number or a SIP URI.",
+                        "type": "string"
+                    },
+                    "network": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "price": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "to": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "_links": {
+                "type": "object"
+            },
+            "common": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "Human readable message",
+                        "type": "string"
+                    },
+                    "request_id": {
+                        "description": "The unique ID of the API request",
+                        "type": "string"
+                    },
+                    "status_code": {
+                        "description": "Unique Nexmo status code",
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "description": "Timestamp of resource creation UTC",
+                        "type": "string"
+                    }
+                }
+            },
+            "conferenceResponse": {
+                "type": "object",
+                "properties": {
+                    "_links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "conference_uuid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "end_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "participants_count": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "error": {
+                "type": "object",
+                "properties": {
+                    "detail": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "instance": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "participantResponse": {
+                "type": "object",
+                "properties": {
+                    "_links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "call_status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "call_uuid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "earmuff": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "end_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "from": {
+                        "description": "An e.164 formatted number or a SIP URI.",
+                        "type": "string"
+                    },
+                    "mute": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "network": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "price": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rate": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "to": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "vol": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "recordingBase": {
+                "type": "object",
+                "properties": {
+                    "backup_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "backup_url": {
+                        "description": "Backup event URL in case primary is unavailable.",
+                        "type": "string"
+                    },
+                    "beep_finish": {
+                        "description": "Whether to beep when the recording finishes. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to false",
+                        "type": "boolean"
+                    },
+                    "beep_start": {
+                        "description": "Whether to beep when the recording starts. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to false",
+                        "type": "boolean"
+                    },
+                    "destination_url": {
+                        "description": "Optional URL to record the recording to if it is not hosted by Nexmo. If omitted, the recording is hosted by Nexmo ",
+                        "type": "string"
+                    },
+                    "event_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "event_url": {
+                        "description": "Asynchronous webhook that receives event information of a call.",
+                        "type": "string"
+                    },
+                    "format": {
+                        "description": "Format of the file. Options are \u2018mp3\u2019, \u2018wav\u2019 or \u2018vorbis\u2019. Defaults to \u2018mp3\u2019",
+                        "type": "string"
+                    },
+                    "public": {
+                        "description": "Whether to require credentials to access the file or public. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to \u2018false\u2019",
+                        "type": "boolean"
+                    },
+                    "streamed": {
+                        "description": "If destination_url is specified, whether to stream the recording immediately or uploaded via a multipart form submission once the recording has finished. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to \u2018false\u2019 (only valid if split is \u2018false\u2019)",
+                        "type": "boolean"
+                    },
+                    "validity_time": {
+                        "description": "Time in minutes that the recording is valid for until it is deleted if hosted by Nexmo. 1>validity_time. Default is indefinite ",
+                        "type": "integer"
+                    }
+                }
+            },
+            "recordingRequest": {
+                "type": "object",
+                "properties": {
+                    "backup_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "backup_url": {
+                        "description": "Backup event URL in case primary is unavailable.",
+                        "type": "string"
+                    },
+                    "beep_finish": {
+                        "description": "Whether to beep when the recording finishes. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to false",
+                        "type": "boolean"
+                    },
+                    "beep_start": {
+                        "description": "Whether to beep when the recording starts. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to false",
+                        "type": "boolean"
+                    },
+                    "destination_url": {
+                        "description": "Optional URL to record the recording to if it is not hosted by Nexmo. If omitted, the recording is hosted by Nexmo ",
+                        "type": "string"
+                    },
+                    "event_method": {
+                        "description": "HTTP method that is used to make the request. Defaults to POST.",
+                        "type": "string"
+                    },
+                    "event_url": {
+                        "description": "Asynchronous webhook that receives event information of a call.",
+                        "type": "string"
+                    },
+                    "format": {
+                        "description": "Format of the file. Options are \u2018mp3\u2019, \u2018wav\u2019 or \u2018vorbis\u2019. Defaults to \u2018mp3\u2019",
+                        "type": "string"
+                    },
+                    "public": {
+                        "description": "Whether to require credentials to access the file or public. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to \u2018false\u2019",
+                        "type": "boolean"
+                    },
+                    "split": {
+                        "description": "Whether to split the recording into two separate recordings per leg (prefixed with \u2018a_\u2019 or \u2018b_\u2019. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to \u2018false\u2019",
+                        "type": "boolean"
+                    },
+                    "streamed": {
+                        "description": "If destination_url is specified, whether to stream the recording immediately or uploaded via a multipart form submission once the recording has finished. Options are \u2018true\u2019 or \u2018false\u2019. Defaults to \u2018false\u2019 (only valid if split is \u2018false\u2019)",
+                        "type": "boolean"
+                    },
+                    "validity_time": {
+                        "description": "Time in minutes that the recording is valid for until it is deleted if hosted by Nexmo. 1>validity_time. Default is indefinite ",
+                        "type": "integer"
+                    }
+                }
+            },
+            "recordingResponse": {
+                "type": "object",
+                "properties": {
+                    "_links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "call_uuid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "duration": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "recording_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "recording_url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "streamRequest": {
+                "type": "object",
+                "properties": {
+                    "level": {
+                        "description": "Set the audio level of the stream. -1>=level=<1. Defaults to 0. Resolution is 0.1",
+                        "type": "number"
+                    },
+                    "loop": {
+                        "description": "Whether to loop the stream once the stream ends. Options are an integer 0>=loop<10 where 0 loops continously. Defaults to 1. ",
+                        "type": "integer"
+                    },
+                    "stream_url": {
+                        "description": "A comma separated list of audio URLs to stream. ",
+                        "type": "string"
+                    }
+                }
+            },
+            "ttsRequest": {
+                "type": "object",
+                "properties": {
+                    "gender": {
+                        "description": "The gender to use for TTS. Options are \u2018male\u2019 or \u2018female\u2019. Defaults to female",
+                        "type": "string"
+                    },
+                    "language": {
+                        "description": "The language used to read the message. Defaults to \"en-gb\"  ",
+                        "type": "string"
+                    },
+                    "level": {
+                        "description": "Set the audio level of the stream. -1>=level=<1. Defaults to 0. Resolution is 0.1",
+                        "type": "number"
+                    },
+                    "loop": {
+                        "description": "Whether to loop the stream once the stream ends. Options are an integer 0>=loop<10 where 0 loops continously. Defaults to 1. ",
+                        "type": "integer"
+                    },
+                    "text": {
+                        "description": "\nBody of the text message. 0>text<1500. Commas control pauses in speech.",
+                        "type": "string"
+                    }
+                }
+            },
+            "whisperResponse": {
+                "type": "object",
+                "properties": {
+                    "_links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "conference_uuid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "end_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "parent_conference_uuid": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "participants_count": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "start_time": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
