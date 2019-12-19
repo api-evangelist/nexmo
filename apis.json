@@ -1,0 +1,188 @@
+{
+    "name": "Nexmo",
+    "description": "Nexmo, a Vonage Company, is a global cloud communications platform leader providing innovative APIs & SDKs for voice, text, messaging & phone verification.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/626-nexmo.jpg",
+    "tags": [
+        "api provider",
+        "api united kingdom",
+        "bulk",
+        "global",
+        "have api",
+        "have swagger",
+        "messages",
+        "relative data",
+        "service api",
+        "smpp",
+        "telecommunications",
+        "webhook implementations"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/nexmo\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Nexmo SMS API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/626-nexmo.jpg",
+            "humanURL": "http:\/\/nexmo.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nexmo-sms-api.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/nexmo-sms-api-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Nexmo API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/626-nexmo.jpg",
+            "humanURL": "http:\/\/nexmo.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nexmo-api.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/nexmo-api-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": ".NET SDK",
+            "url": "http:\/\/dotnet-snippets.com\/dns\/send-sms-SID658.aspx"
+        },
+        {
+            "type": "Base",
+            "url": "https:\/\/rest.nexmo.com\/"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/blog.nexmo.com"
+        },
+        {
+            "type": "Case Studies",
+            "url": "http:\/\/www.nexmo.com\/customers\/#case"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/nexmo"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/nexmo"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/docs.nexmo.com\/"
+        },
+        {
+            "type": "Email",
+            "url": "sales@nexmo.com"
+        },
+        {
+            "type": "Email",
+            "url": "press@nexmo.com"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@nexmo.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@nexmo.com"
+        },
+        {
+            "type": "Email",
+            "url": "billing@nexmo.com"
+        },
+        {
+            "type": "Email",
+            "url": "legal@nexmo.com"
+        },
+        {
+            "type": "Email",
+            "url": "info@nexmo.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/Nexmo"
+        },
+        {
+            "type": "Java SDK",
+            "url": "https:\/\/labs.nexmo.com\/download\/nexmo-java-sdk-v1.5.zip"
+        },
+        {
+            "type": "Node.js SDK",
+            "url": "https:\/\/github.com\/pvela\/nexmo"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/626-2019-09-03-21-47-53.json"
+        },
+        {
+            "type": "Perl SDK",
+            "url": "https:\/\/github.com\/reneeb\/perl-Nexmo-SMS"
+        },
+        {
+            "type": "PHP SDK",
+            "url": "https:\/\/github.com\/prawnsalad\/Nexmo-PHP-lib"
+        },
+        {
+            "type": "Pricing",
+            "url": "http:\/\/www.nexmo.com\/pricing\/"
+        },
+        {
+            "type": "Privacy",
+            "url": "http:\/\/www.nexmo.com\/privacy-policy-2\/"
+        },
+        {
+            "type": "Python SDK",
+            "url": "https:\/\/github.com\/marcuz\/libpynexmo"
+        },
+        {
+            "type": "Ruby SDK",
+            "url": "https:\/\/github.com\/timcraft\/nexmo"
+        },
+        {
+            "type": "Registration",
+            "url": "https:\/\/dashboard.nexmo.com\/register"
+        },
+        {
+            "type": "Terms of Service",
+            "url": "http:\/\/www.nexmo.com\/terms-use\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/nexmo"
+        },
+        {
+            "type": "Webhooks",
+            "url": "https:\/\/developer.nexmo.com\/concepts\/guides\/webhooks"
+        },
+        {
+            "type": "Webinars",
+            "url": "http:\/\/www.nexmo.com\/resources\/webinars\/"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/nexmo.com\/"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/nexmo.com"
+        }
+    ]
+}
