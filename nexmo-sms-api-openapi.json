@@ -1,0 +1,92 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v1",
+        "title": "Nexmo SMS API",
+        "description": "Nexmo makes it simple to send and receive a high volume of SMS anywhere in the world within minutes.",
+        "termsOfService": "https:\/\/www.nexmo.com\/terms"
+    },
+    "servers": [
+        "httprest.nexmo.com\/"
+    ],
+    "paths": {
+        "sms\/{format}": {
+            "get": {
+                "summary": "Send Message",
+                "description": "Nexmo makes it simple to send and receive a high volume of SMS anywhere in the world within minutes.",
+                "operationId": "SendMessage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "api_key",
+                        "in": "query",
+                        "description": "Your API Key."
+                    },
+                    {
+                        "name": "api_secret",
+                        "in": "query",
+                        "description": "Your API Secret."
+                    },
+                    {
+                        "name": "client-ref",
+                        "in": "query",
+                        "description": "Include any reference string for your reference. Useful for your internal reports (40 characters max)."
+                    },
+                    {
+                        "name": "format",
+                        "in": "path",
+                        "description": "XML or JSON"
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Sender address may be alphanumeric (Ex: from=MyCompany20). Restrictions may apply, depending on the destination. "
+                    },
+                    {
+                        "name": "message-class",
+                        "in": "query",
+                        "description": "Set to 0 for Flash SMS."
+                    },
+                    {
+                        "name": "network-code",
+                        "in": "query",
+                        "description": "Force the recipient network operator MCCMNC, make sure to supply the correct information otherwise the message wont be delivered."
+                    },
+                    {
+                        "name": "status-report-req",
+                        "in": "query",
+                        "description": "Set to 1 if you want to receive a delivery report (DLR) for this request. Make sure to configure your Callback URL in your API Settings"
+                    },
+                    {
+                        "name": "text",
+                        "in": "query",
+                        "description": "Body of the text message (with a maximum length of 3200 characters), UTF-8 and URL encoded value. "
+                    },
+                    {
+                        "name": "to",
+                        "in": "query",
+                        "description": "Mobile number in international format, and one recipient per request."
+                    },
+                    {
+                        "name": "ttl",
+                        "in": "query",
+                        "description": "Message life span in milliseconds."
+                    },
+                    {
+                        "name": "type_of_media",
+                        "in": "query",
+                        "description": "This can be omitted for text (default), but is required when sending a Binary (binary), WAP Push (wappush), Unicode message (unicode), vcal (vcal) or vcard (vcard)."
+                    },
+                    {
+                        "name": "vcard",
+                        "in": "query",
+                        "description": "vcard text body correctly formatted."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
