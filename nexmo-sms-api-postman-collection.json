@@ -1,0 +1,128 @@
+{
+    "id": "ea2a5a3c57cc7b7964691bd51e1023ba",
+    "name": "Nexmo SMS API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "7eaed6cf1b0d5cd19c8e99b86c4c002b",
+            "name": "Send Message",
+            "url": "httprest.nexmo.com\/sms\/{format}",
+            "description": "Nexmo makes it simple to send and receive a high volume of SMS anywhere in the world within minutes.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_key",
+                    "description": "Your API Key.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "api_secret",
+                    "description": "Your API Secret.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client-ref",
+                    "description": "Include any reference string for your reference. Useful for your internal reports (40 characters max).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "format",
+                    "description": "XML or JSON",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "from",
+                    "description": "Sender address may be alphanumeric (Ex: from=MyCompany20). Restrictions may apply, depending on the destination. ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "message-class",
+                    "description": "Set to 0 for Flash SMS.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "network-code",
+                    "description": "Force the recipient network operator MCCMNC, make sure to supply the correct information otherwise the message wont be delivered.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status-report-req",
+                    "description": "Set to 1 if you want to receive a delivery report (DLR) for this request. Make sure to configure your Callback URL in your API Settings",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "text",
+                    "description": "Body of the text message (with a maximum length of 3200 characters), UTF-8 and URL encoded value. ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "to",
+                    "description": "Mobile number in international format, and one recipient per request.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ttl",
+                    "description": "Message life span in milliseconds.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type_of_media",
+                    "description": "This can be omitted for text (default), but is required when sending a Binary (binary), WAP Push (wappush), Unicode message (unicode), vcal (vcal) or vcard (vcard).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "vcard",
+                    "description": "vcard text body correctly formatted.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ea2a5a3c57cc7b7964691bd51e1023ba",
+            "rawModeData": ""
+        }
+    ]
+}
