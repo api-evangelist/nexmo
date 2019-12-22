@@ -16,8 +16,8 @@
         "telecommunications",
         "webhook implementations"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/nexmo\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -31,11 +31,11 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nexmo-sms-api.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/nexmo\/master\/nexmo-sms-api-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/nexmo-sms-api-openapi.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nexmo-sms-api.json"
                 }
             ]
         },
@@ -49,17 +49,21 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nexmo-api.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/nexmo\/master\/nexmo-api-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/nexmo-api-openapi.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/nexmo-api.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": ".NET SDK",
             "url": "http:\/\/dotnet-snippets.com\/dns\/send-sms-SID658.aspx"
