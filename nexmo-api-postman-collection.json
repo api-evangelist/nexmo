@@ -1,5 +1,5 @@
 {
-    "id": "4f5e8446387c735c62fbf95816070c93",
+    "id": "a4cbdcd2cd4180a744924cfda870f330",
     "name": "Nexmo API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "c5094bb0aa45c0287f7e20f4a165c6df",
+            "id": "92963ca6804dd87611ce30c7c0132095",
             "name": "List Applications",
             "url": "http:\/\/api.nexmo.com\/v2\/applications",
             "description": "Get details of all apps associated with an account.",
@@ -65,11 +65,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4f5e8446387c735c62fbf95816070c93",
+            "collectionId": "a4cbdcd2cd4180a744924cfda870f330",
             "rawModeData": ""
         },
         {
-            "id": "3fe4af814f5ea984c22166ccb5a68aa9",
+            "id": "517b8bb1fe19a2db59195351450529c5",
             "name": "",
             "url": "http:\/\/api.nexmo.com\/v2\/applications",
             "description": "",
@@ -88,11 +88,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4f5e8446387c735c62fbf95816070c93",
+            "collectionId": "a4cbdcd2cd4180a744924cfda870f330",
             "rawModeData": ""
         },
         {
-            "id": "ac1b111487254b00b9c885d711eac7ed",
+            "id": "6cc000e111f5a44579b9e16580f133a6",
             "name": "Create Application",
             "url": "http:\/\/api.nexmo.com\/v2\/applications",
             "description": "Create a new application.",
@@ -111,7 +111,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4f5e8446387c735c62fbf95816070c93",
+            "collectionId": "a4cbdcd2cd4180a744924cfda870f330",
             "rawModeData": ""
         }
     ]
