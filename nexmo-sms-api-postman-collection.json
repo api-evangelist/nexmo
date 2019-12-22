@@ -1,5 +1,5 @@
 {
-    "id": "ea2a5a3c57cc7b7964691bd51e1023ba",
+    "id": "786eb80716eedda191844e4e62cde43d",
     "name": "Nexmo SMS API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "7eaed6cf1b0d5cd19c8e99b86c4c002b",
+            "id": "a6b7137cfeb16708638f8d7c83596699",
             "name": "Send Message",
             "url": "httprest.nexmo.com\/sms\/{format}",
             "description": "Nexmo makes it simple to send and receive a high volume of SMS anywhere in the world within minutes.",
@@ -121,7 +121,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ea2a5a3c57cc7b7964691bd51e1023ba",
+            "collectionId": "786eb80716eedda191844e4e62cde43d",
             "rawModeData": ""
         }
     ]
